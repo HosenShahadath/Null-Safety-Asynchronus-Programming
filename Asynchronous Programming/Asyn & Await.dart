@@ -5,8 +5,12 @@ void main(){
 }
 
 void getDatta() async{
-  String data = await midleFunction();
-  print(data);
+  try{
+    String data = await midleFunction();
+    print(data);
+  }catch(e){
+    print('Some error $e');
+  }
 }
 
 Future<String> midleFunction(){
